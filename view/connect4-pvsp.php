@@ -1,3 +1,10 @@
+<?php
+require_once(__DIR__ . '/../controller/User.php');
+require_once(__DIR__ . '/../controller/Toolbox.php');
+require_once(__DIR__ . '/../controller/Security.php');
+
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,6 +18,12 @@
 <body>
     <?php require_once 'header.php'; ?>
     <main>
+        <article>
+            <?php if(Security::isConnect()){?>
+                <h3> <?= $_SESSION['user']['login']; ?>  Tu es en Rouge </h3>
+            <h3>L'invité est en Jaune</h3>
+            <?php } ?>
+        </article>
         <h2 id="winner"></h2>
         <div id="board"></div>
     </main>

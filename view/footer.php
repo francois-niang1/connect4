@@ -17,11 +17,15 @@
         <article class="pages">
             <ul>
                 <a href="../index.php"><li>Accueil</li></a>
-                <a href="../view/connect4-pvsp.php"><li>J VS J</li></a>
-                <a href="../view/connect4-pvsai.php"><li>J VS AI</li></a>
+                <a href="../view/connect4-pvsp.php"><li>Jouer</li></a>
+                <?php if (Security::isConnect()){?>
+                <a href="../view/profil.php"><li>Profil</li></a>
+                <a href="../view/disconnect.php"><li>Deconnexion</li></a>
+                <?php }
+                else{ ?>
                 <a href="../view/connection.php"><li>Connexion</li></a>
                 <a href="../view/register.php"><li>Inscription</li></a>
-                <a href="../view/profil.php"><li>Profil</li></a>
+                <?php }?>
             </ul>
         </article>
     </section>

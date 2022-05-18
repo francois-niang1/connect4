@@ -119,9 +119,20 @@ function setWinner(r, c) {
     if (board[r][c] == playerRed) {
         winner.innerText = "Victoire Rouge";
         winner.setAttribute("style", "color:Red");
+        $.ajax({
+            url: "../model/Win.php",
+            type: "POST"
+        });
     } else {
         winner.innerText = "Victoire Jaune";
         winner.setAttribute("style", "color:yellow");
+        $.ajax({
+            url: "../model/Lose.php",
+            type: "POST"
+        });
     }
     gameOver = true;
 }
+
+
+

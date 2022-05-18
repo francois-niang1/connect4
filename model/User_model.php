@@ -1,6 +1,7 @@
 <?php
 require_once(__DIR__ . '/../database/DB.php');
 require_once(__DIR__ . '/../controller/Security.php');
+require_once(__DIR__ . '/Stats_model.php');
 
 class User_model{
 
@@ -16,6 +17,8 @@ class User_model{
                 ":login" => $login_safe,
                 ":password" => $password_hash
             ));
+            $results = User_model::info_user_login($login_safe);
+            Stats_model::create_profil($results['id']);
             Toolbox::addMessageAlert("Le compte est créé!", Toolbox::GREEN_COLOR);
             header("Location: ./connection.php");
             exit();

@@ -5,7 +5,7 @@ require_once(__DIR__ . '/../controller/Security.php');
 require_once(__DIR__ . '/../model/Stats_model.php');
 
 $stats = New Stats_model();
-$myStats = $stats->info_stats($_SESSION['user']['id']);
+$myStats = $stats->info_stats_profil($_SESSION['user']['id']);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -13,11 +13,14 @@ $myStats = $stats->info_stats($_SESSION['user']['id']);
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../public/css/profil.css">
     <title>Document</title>
 </head>
 <body>
     <?php require_once('header.php'); ?>
     <main>
+        <h1>Bienvenue <?= $_SESSION['user']['login']?></h1>
+        <h2>Voici votre tableau de score</h2>
         <table>
             <tr>
                 <th>Parties jouées</th>

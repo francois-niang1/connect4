@@ -7,6 +7,8 @@
             <hr>
             <a href="../view/connect4-pvsp.php"><li>Jouer</li></a>
             <hr>
+            <a href="../view/classement.php"><li>Classement</li></a>
+            <hr>
             <?php if (Security::isConnect()){?>
             <a href="../view/profil.php"><li>Profil</li></a>
             <hr>

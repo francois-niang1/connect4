@@ -1,0 +1,41 @@
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+table{
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th{
+    font-size: clamp(1rem, 4vw, 2.5rem);
+    text-align: center;
+    font-family: Texte;
+    border: 1px solid black;
+    padding: 20px;
+}
+
+tr{
+    font-size: clamp(1rem, 4vw, 2rem);
+    text-align: center;
+    font-family: Texte;
+    border: 1px solid black;
+}
+td{
+    border: 1px solid black;
+}
+
+main h1{
+    font-size: clamp(1.2rem, 6vw, 3rem);
+    margin: 0;
+    text-align: center;
+    font-family: Title;
+}
+main h2{
+    font-size: clamp(1.2rem, 6vw, 2rem);
+    margin: 0;
+    text-align: center;
+    font-family: Texte;
+}

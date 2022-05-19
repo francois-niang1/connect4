@@ -18,6 +18,7 @@
             <ul>
                 <a href="../index.php"><li>Accueil</li></a>
                 <a href="../view/connect4-pvsp.php"><li>Jouer</li></a>
+                <a href="../view/classement.php"><li>Classement</li></a>
                 <?php if (Security::isConnect()){?>
                 <a href="../view/profil.php"><li>Profil</li></a>
                 <a href="../view/disconnect.php"><li>Deconnexion</li></a>

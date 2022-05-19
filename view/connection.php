@@ -21,7 +21,8 @@ if(isset($_POST['connection'])){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="../public/css/form.css">
+    <title>Connexion</title>
 </head>
 <body>
     <?php require_once('header.php'); ?>
@@ -34,6 +35,7 @@ if(isset($_POST['connection'])){
 
                 <label for ="passwordC">  Mot de passe :</label>
                 <input id="passwordC" type="password" name="passwordC" placeholder="Mot de passe" />
+                <?php require_once('errors.php'); ?>
             </fieldset>
             <button type="submit" name="connection">Connexion</button>
         </form>

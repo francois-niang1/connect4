@@ -8,11 +8,11 @@ require_once(__DIR__ . '/controller/Security.php');
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="public/js/index.js"></script>
     <link rel="stylesheet" href="public/css/index.css">
     <link rel="stylesheet" href="public/css/root&font.css">
     <link rel="stylesheet" href="public/css/header.css">
     <link rel="stylesheet" href="public/css/footer.css">
-    <script type="text/javascript" src="public/js/index.js"></script>
     <title>Accueil</title>
 </head>
 <body>
@@ -22,6 +22,8 @@ require_once(__DIR__ . '/controller/Security.php');
             <ul>
                 <hr>
                 <a href="view/connect4-pvsp.php"><li>Jouer</li></a>
+                <hr>
+                <a href="view/classement.php"><li>Classement</li></a>
                 <hr>
                 <?php if (Security::isConnect()){?>
                 <a href="view/profil.php"><li>Profil</li></a>
@@ -39,7 +41,7 @@ require_once(__DIR__ . '/controller/Security.php');
         </nav>
     </header>
     <main>
-
+        <h1>Ne criez pas victoire trop vite !!</h1>
     </main>
     <footer>
         <section class="part-one">
@@ -58,7 +60,8 @@ require_once(__DIR__ . '/controller/Security.php');
             <article class="pages">
                 <ul>
                     <a href="index.php"><li>Accueil</li></a>
-                    <a href="view/connect4-pvsp.php"><li>J VS J</li></a>
+                    <a href="view/connect4-pvsp.php"><li>Jouer</li></a>
+                    <a href="view/classement.php"><li>Classement</li></a>
                     <?php if (Security::isConnect()){?>
                     <a href="view/profil.php"><li>Profil</li></a>
                     <a href="view/disconnect.php"><li>Deconnexion</li></a>

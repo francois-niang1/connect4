@@ -22,13 +22,23 @@ class Stats_model{
         $stmt->execute(array(
             ":id_user" => $id_user
         ));
+        $results = $stmt->fetch(PDO::FETCH_ASSOC);
+        $stmt->closeCursor();
+        return $results;
+    }
+    public static function info_stats_profil($id_user){
+        $req = "SELECT * FROM stats WHERE id_user = :id_user";
+        $stmt = Database::connect_db()->prepare($req);
+        $stmt->execute(array(
+            ":id_user" => $id_user
+        ));
         $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
         $stmt->closeCursor();
         return $results;
     }
 
     public function sql_classement(){
-        $req = "SELECT u.login AS login, s.game_played AS played, s.game_won AS won FROM stats s INNER JOIN users u WHERE u.id = s.id_user ORDER BY s.game_won DESC, s.game_played ASC LIMIT 5";
+        $req = "SELECT u.login AS login, s.game_played AS played, s.game_won AS won FROM stats s INNER JOIN users u WHERE u.id = s.id_user ORDER BY s.game_won DESC, s.game_played ASC LIMIT 10";
         $stmt = Database::connect_db()->prepare($req);
         $stmt->execute();
         $results = $stmt->fetchAll(PDO::FETCH_ASSOC);

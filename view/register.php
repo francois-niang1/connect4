@@ -30,7 +30,8 @@ if(Security::isConnect()){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="../public/css/form.css">
+    <title>Inscription</title>
 </head>
 <body>
     <?php require_once('header.php'); ?>
@@ -46,6 +47,7 @@ if(Security::isConnect()){
 
                 <label for ="conf-password">Confirmez le mot de passe :</label>
                 <input id="conf-password" type="password" name="conf-password" placeholder="Confirmez le mot de passe" />
+                <?php require_once('errors.php'); ?>
             </fieldset>
             <button type="submit" name="register">Creer un compte</button>
         </form>

@@ -40,6 +40,7 @@ header nav a{
     text-decoration: none;
     transition: ease-in-out 0.5s;
     color: black;
+    font-family: Title;
 }
 header nav ul{
     font-family: Txt;
@@ -61,9 +62,9 @@ header nav ul li{
     height: 60px;
 }
 header nav ul li:hover{
-    background-color: rgb(234, 232, 232);
-    color: rgb(116, 116, 236);
+    background-color: rgb(222, 222, 104);
+    color: rgb(199, 61, 61);
 }
 header nav h1:hover{
-    color: rgb(67, 67, 167);
+    color: rgb(176, 36, 36);
 }

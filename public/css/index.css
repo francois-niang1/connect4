@@ -1,0 +1,22 @@
+html, body {
+    width:100%;  
+}
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.ball {
+    position: absolute;
+    border-radius: 100%;
+    opacity: 0.7;
+}
+
+main h1{
+    font-size: clamp(1.2rem, 6vw, 5rem);
+    margin: 0;
+    text-align: center;
+    font-family: Title;
+}

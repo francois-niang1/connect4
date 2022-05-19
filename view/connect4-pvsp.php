@@ -22,7 +22,7 @@ session_start();
         <article>
             <?php if(Security::isConnect()){?>
                 <h3> <?= $_SESSION['user']['login']; ?>  Tu es en Rouge </h3>
-            <h3>L'invité est en Jaune</h3>
+                <h3>L'invité est en Jaune</h3>
             <?php } ?>
         </article>
         <h2 id="winner"></h2>
